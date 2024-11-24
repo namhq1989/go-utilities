@@ -54,6 +54,10 @@ func NewWorker(ctx context.Context) *AppContext {
 	return newWithSource(ctx, "worker")
 }
 
+func (appCtx *AppContext) SetTraceID(traceID string) {
+	appCtx.traceID = traceID
+}
+
 func (appCtx *AppContext) AddLogData(fields Fields) {
 	appCtx.logger.AddData(fields)
 }
