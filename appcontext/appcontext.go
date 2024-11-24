@@ -58,6 +58,10 @@ func (appCtx *AppContext) SetTraceID(traceID string) {
 	appCtx.traceID = traceID
 }
 
+func (appCtx *AppContext) GetTraceID() string {
+	return appCtx.traceID
+}
+
 func (appCtx *AppContext) AddLogData(fields Fields) {
 	appCtx.logger.AddData(fields)
 }
