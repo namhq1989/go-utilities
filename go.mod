@@ -5,6 +5,7 @@ go 1.21.9
 toolchain go1.21.12
 
 require (
+	github.com/rs/xid v1.6.0
 	github.com/segmentio/ksuid v1.0.4
 	github.com/sirupsen/logrus v1.9.3
 )
