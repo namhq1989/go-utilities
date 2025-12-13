@@ -25,6 +25,10 @@ func (l *Logger) Text(message string) {
 	l.logger.Info(message)
 }
 
+func (l *Logger) Warn(message string, fields Fields) {
+	l.logger.WithFields(fields).Warn(message)
+}
+
 func (l *Logger) ErrorText(message string) {
 	l.logger.Error(message)
 }
