@@ -19,7 +19,7 @@ var l = logrus.New()
 
 func Init(environment string) {
 	var (
-		isRelease   = environment == "release"
+		isRelease   = environment == "release" || environment == "prod" || environment == "production"
 		level       = logrus.DebugLevel
 		forceColors = true
 	)
